@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WeatherproProvider } from '../providers/weatherpro/weatherpro';
 import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -35,11 +36,13 @@ import {HttpClientModule} from '@angular/common/http';
     TabsPage,
     WeatherPage
   ],
+  // Native
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WeatherproProvider
+    WeatherproProvider,
+    
   ]
 })
 export class AppModule {}

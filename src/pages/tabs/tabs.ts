@@ -7,8 +7,12 @@ import {WeatherPage} from '../weather/weather';
 @Component({
   templateUrl: 'tabs.html'
 })
-export class TabsPage {
 
+
+export class TabsPage {
+ /**
+    *   calling pages via tabRoot
+    */
   tab1Root = HomePage;
   tab2Root = WeatherPage;
   tab3Root = FlashlightPage;

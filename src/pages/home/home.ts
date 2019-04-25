@@ -5,6 +5,10 @@ import { NavController } from 'ionic-angular';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
+/**
+*   Main starting page
+*/
 export class HomePage {
 
   constructor(public navCtrl: NavController) {

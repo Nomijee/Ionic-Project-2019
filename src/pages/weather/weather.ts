@@ -13,10 +13,14 @@ import{WeatherproProvider} from '../../providers/weatherpro/weatherpro';
   selector: 'page-weather',
   templateUrl: 'weather.html',
 })
+
+/**
+    *   Show weather and then enter city name 
+    */
 export class WeatherPage {
 weather:any=[];
 city:String;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private weath:WeatherproProvider,private mainweth:WeatherproProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private weath:WeatherproProvider) {
   }
 
   search() {
