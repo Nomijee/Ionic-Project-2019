@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { FlashlightPage } from '../pages/flashlight/flashlight';
+import{GpsPage} from '../pages/gps/gps';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -12,15 +12,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { WeatherproProvider } from '../providers/weatherpro/weatherpro';
 import {HttpClientModule} from '@angular/common/http';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
     MyApp,
-    FlashlightPage,
     ContactPage,
     HomePage,
     TabsPage,
-    WeatherPage
+    WeatherPage,
+    GpsPage
   ],
   imports: [
     BrowserModule,
@@ -30,11 +31,11 @@ import {HttpClientModule} from '@angular/common/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    FlashlightPage,
     ContactPage,
     HomePage,
     TabsPage,
-    WeatherPage
+    WeatherPage,
+    GpsPage
   ],
   // Native
   providers: [
@@ -42,7 +43,7 @@ import {HttpClientModule} from '@angular/common/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WeatherproProvider,
-    
+    Geolocation
   ]
 })
 export class AppModule {}
